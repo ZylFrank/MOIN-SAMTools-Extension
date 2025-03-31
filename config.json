@@ -1,0 +1,76 @@
+{
+  "name": "SAMTools",
+  "category": "software",
+  "modules": ["Basic"],
+  "version": "0.0.1",
+  "runName": "/mnt/miniconda3/envs/moin/bin/samtools",
+  "homepage": "https://raw.githubusercontent.com/ZylFrank/MOIN-SAMTools-Extension/refs/heads/main/README.md",
+  "descript": "An extension on the SAMTools software.",
+  "dependencies": {
+    "conda": ["conda install bioconda::samtools"]
+  },
+  "parameters": [
+    {
+      "module": "default",
+      "args": [
+        {
+          "label": "input",
+          "value": "--input",
+          "category": "fileSelector",
+          "isInput": "yes",
+          "isRequired": true,
+          "descript": "select a input file."
+        },
+        {
+          "label": "output format",
+          "value": "-O",
+          "category": "str",
+          "defaultValue": "b",
+          "descript": "set the output file format."
+        },
+        {
+          "label": "output filename",
+          "value": "-o",
+          "category": "str",
+          "isOutput": "yes",
+          "isRequired": true,
+          "descript": "set output filename."
+        }
+      ]
+    },
+    {
+      "module": "view",
+      "args": [
+        {
+          "label": "isBAM",
+          "value": "-b",
+          "category": "boolean",
+          "defaultValue": "true",
+          "descript": "convert the output to the BAM format."
+        },
+        {
+          "label": "include header",
+          "value": "-h",
+          "category": "boolean",
+          "defaultValue": "false",
+          "descript": "print header for the SAM output."
+        },
+        {
+          "label": "input is SAM",
+          "value": "-S",
+          "category": "boolean",
+          "defaultValue": "true",
+          "descript": "input is SAM."
+        }
+      ]
+    },
+    {
+      "module": "sort",
+      "args": []
+    },
+    {
+      "module": "index",
+      "args": []
+    }
+  ]
+}
