@@ -5,9 +5,15 @@
   "version": "0.0.1",
   "runName": "/mnt/miniconda3/envs/moin/bin/samtools",
   "homepage": "https://raw.githubusercontent.com/ZylFrank/MOIN-SAMTools-Extension/refs/heads/main/README.md",
-  "descript": "An extension on the SAMTools software.",
+  "descript": "An extension for the SAMTools software.",
   "dependencies": {
-    "conda": ["conda install bioconda::samtools"]
+    "conda": [
+      {
+        "package": "samtools",
+        "version": "1.21",
+        "install": ["conda install bioconda::samtools"]
+      }
+    ]
   },
   "parameters": [
     {
