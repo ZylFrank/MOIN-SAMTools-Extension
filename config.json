@@ -11,7 +11,7 @@
       {
         "package": "samtools",
         "version": "1.21",
-        "install": ["conda install bioconda::samtools"]
+        "install": ["conda install bioconda/label/cf201901::samtools"]
       }
     ]
   },
